@@ -1,0 +1,63 @@
+If you really need to do a full purge and reinstall, first make sure PostgreSQL isn't running. 
+ps -C postgres should show no results.
+
+apt-get --purge remove postgresql\*
+
+Then run :
+
+rm -r /etc/postgresql/
+rm -r /etc/postgresql-common/
+rm -r /var/lib/postgresql/
+userdel -r postgres
+groupdel postgres
+
+
+To reinstall : 
+
+apt-get install postgresql
+
+apt install build-essential cmake postgresql-server-dev-16 libproj-dev libjson-c-dev libgsl-dev libgeos-dev
+
+
+To install postgis run this two commands:
+
+sudo apt install postgresql-16-postgis-3
+
+sudo apt install postgis
+
+
+
+changer le  code a la  ligne 1114 du fichier MobilityDB/meos/src/general/temporal.c par celui ci
+
+Temporal *
+temporal_append_tinstant(Temporal *temp, const TInstant *inst, double maxdist,
+  Interval *maxt, bool expand)
+{
+  /* Validity tests */
+  if (! ensure_not_null((void *) temp) || ! ensure_not_null((void *) inst) ||
+      ! ensure_same_temporal_type(temp, (Temporal *) inst) ||
+      ! ensure_temporal_has_subtype((Temporal *) inst, TINSTANT) ||
+      ! ensure_spatial_validity(temp, (const Temporal *) inst))
+    return NULL;
+
+  /* The test to ensure the increasing timestamps must be done in the
+   * subtype function since the inclusive/exclusive bounds must be
+   * taken into account for temporal sequences and sequence sets */
+
+  Temporal *result;
+  assert(temptype_subtype(temp->subtype));
+  if (temp->subtype == TINSTANT)
+  {
+    TSequence *seq = tinstant_to_tsequence((const TInstant *) temp, LINEAR);
+    result = (Temporal *) tsequence_append_tinstant(seq, inst, maxdist, maxt,
+      expand);
+    pfree(seq);
+  }
+  else if (temp->subtype == TSEQUENCE)
+    result = (Temporal *) tsequence_append_tinstant((TSequence *) temp,
+      inst, maxdist, maxt, expand);
+  else /* temp->subtype == TSEQUENCESET */
+    result = (Temporal *) tsequenceset_append_tinstant((TSequenceSet *) temp,
+      inst, maxdist, maxt, expand);
+  return result;
+}
