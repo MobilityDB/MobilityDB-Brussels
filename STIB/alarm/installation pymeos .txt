@@ -1,0 +1,4 @@
+Oh, the pymeos versions are not the latest ones. You can update them with the following commands:
+pip install --pre --force-reinstall --no-deps pymeos pymeos_cffi
+It's possible that since the new version is a pre-release, even with the --pre flag, you need to force the update with --force-reinstall. The --no-deps flag is to avoid all the dependencies to be reinstalled.
+Let me know if this was the cause of the issue, or if it still happens.

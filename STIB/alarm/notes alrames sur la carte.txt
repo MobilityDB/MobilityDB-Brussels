@@ -1,0 +1,1 @@
+ajouter un pop up avec les information du vehicule detecte comme a l arret et changer la couleur du point.
