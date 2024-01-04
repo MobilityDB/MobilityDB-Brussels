@@ -1,0 +1,31 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Server in the PaaS}}{22}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Data available on the open portal of the STIB}}{23}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Vehicles position in RT}}{24}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Stops by line request result}}{26}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Waiting times RT request result}}{26}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Stop details table}}{28}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Process of STIB data}}{29}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Trancon trajet bus 17 et 95}}{31}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Data recolted}}{32}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Trancon trajet bus 17 et 95}}{33}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Diagram montrant le choix en cas de déviation.}}{34}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Description of the problem when receiving the data}}{35}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Tables containing mobilityDB trips}}{38}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces TLC request example}}{40}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Entire process between requesting data and receiving response.}}{42}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces JSON file received as response from TLC API request}}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Transfer process of ANPR data}}{45}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Example of counting data}}{46}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Example of speed statistic data}}{47}{figure.caption.25}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Communication process to get the visualization}}{50}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Displayed data make no sense}}{51}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Displayed data make no sense}}{52}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Real-Time position of some vehicle of line 71}}{56}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Example of alarm file}}{60}{figure.caption.30}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
