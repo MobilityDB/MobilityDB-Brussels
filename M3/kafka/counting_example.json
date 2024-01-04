@@ -1,0 +1,81 @@
+[
+   {  
+      "_id":{
+         "$oid":"631f11ef1a37fe931717c707"
+      },
+      "_aggregation_id":"1671816600000#PT5M#lightVehicle#BE#60c20774b53a9365fde07960#110000000000000000000001",
+      "_creation_timestamp":{
+         "$date":1671816790522
+      },
+      "_end_timestamp":{
+         "$date":1671816600000
+      },
+      "_start_timestamp":{
+         "$date":1671816300000
+      },
+      "_update_timestamp":{
+         "$date":1671816790522
+      },
+      "count":108,
+      "location":{
+         "coordinates":[
+            4.32164,
+            50.865535
+         ],
+         "type":"Point"
+      },
+      "nationality":"BE",
+      "source":{
+         "name":{
+            "en":"Nom de la caméra en anglais",
+            "fr":"Nom de la caméra en français",
+            "nl-BE":"Nom de la caméra en néerlandais"
+         },
+         "id":"BXLBXL1",
+         "_id":{
+            "$oid":"60c20774b53a9365fde07960"
+         }
+      },
+      "vehicle_type":"lightVehicle"
+   },
+   {
+      
+      "_id":{
+         "$oid":"631f11ef1a37fe931717c708"
+      },
+      "_aggregation_id":"1671816600000#PT5M#lightVehicle#FR#60c20774b53a9365fde07961#110000000000000000000001",
+      "_creation_timestamp":{
+         "$date":1671816790422
+      },
+      "_end_timestamp":{
+         "$date":1671816600000
+      },
+      "_start_timestamp":{
+         "$date":1671816300000
+      },
+      "_update_timestamp":{
+         "$date":1671816790422
+      },
+      "count":12,
+      "location":{
+         "coordinates":[
+            4.32174,
+            50.865545
+         ],
+         "type":"Point"
+      },
+      "nationality":"BE",
+      "source":{
+         "name":{
+            "en":"Nom de la caméra 2 en anglais",
+            "fr":"Nom de la caméra 2 en français",
+            "nl-BE":"Nom de la caméra 2 en néerlandais"
+         },
+         "id":"BXLBXL2",
+         "_id":{
+            "$oid":"60c20774b53a9365fde07961"
+         }
+      },
+      "vehicle_type":"lightVehicle"
+   }
+]
