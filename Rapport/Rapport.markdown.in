@@ -1,6 +1,0 @@
-	SELECT
-	ST_LineLocatePoint(trajectory.trajectory, point1) AS start_fraction
-	FROM
-	terminus_shapes AS trajectory
-	WHERE
-	trajectory.route_short_name = lineID AND trajectory.stopid = directionID
