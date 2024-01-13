@@ -133,3 +133,11 @@ CREATE TABLE stib_trips (
 	current BOOLEAN,
 	trip tgeompoint
 );
+
+DROP TABLE IF EXISTS transport_type;
+CREATE TABLE transport_type as (
+	SELECT DISTINCT ON (route_short_name) route_short_name, 
+						REGEXP_REPLACE(shape_id, '[^a-zA-Z]', '', 'g') AS transport_type
+	FROM terminus_shapes 
+	ORDER BY route_short_name, shape_id
+)
