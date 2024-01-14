@@ -1,5 +1,7 @@
 import re
 import json
+import os.path
+import datetime
 from pymeos import *
 from pymeos.db.psycopg2 import MobilityDB
 
@@ -87,10 +89,21 @@ connection.close()
 # Convert the list of entries to a JSON string
 json_data = json.dumps(json_entries, indent=4)
 
-# Write the JSON string to a file
-json_file_path = './data/vehicle_stops.json'
-with open(json_file_path, 'w') as json_file:
-    json_file.write(json_data)
+current_time = datetime.datetime.now()
+formatted_time = current_time.strftime("%Y-%m-%d_%H:%M:%S")
+json_file_name = f"vehicle_stops_{formatted_time}.json"
+
+# Directory where the file will be saved
+directory = './data'
+
+# Ensure that the directory exists
+os.makedirs(directory, exist_ok=True)
+
+# Full path for the JSON file
+json_file_path = os.path.join(directory, json_file_name)
+if not os.path.exists(json_file_path):
+    with open(json_file_path, 'w+') as json_file:
+        json_file.write(json_data)
 
 # Output the path to the JSON file for reference
 print(f"JSON file created at {json_file_path}")
