@@ -65,7 +65,7 @@ func getStopsDetails() {
 func makeWaitingTimeRequests() {
 	var wg sync.WaitGroup
 
-	apiURLFormat  := "https://stibmivb.opendatasoft.com/api/explore/v2.1/catalog/datasets/waiting-time-rt-production/records?limit=100&offset=%d&apikey=abdb9e039bc041977c9c251402ad6d967fef8530dedcacdd2c91385e"
+	apiURLFormat  := "https://stibmivb.opendatasoft.com/api/explore/v2.1/catalog/datasets/waiting-time-rt-production/records?limit=100&offset=%d&apikey=" + os.Getenv("STIB_API_KEY")
 	totalRequests := 33
 
 	// Generate a timestamp when the function is called
@@ -145,7 +145,7 @@ func processRtPositionAPIResponse(mapOfDirections map[string]string) (map[string
 	brusselsLocation, err := time.LoadLocation("Europe/Brussels")
 
     // Make a GET request to an external API
-    response, err := http.Get("https://stibmivb.opendatasoft.com/api/explore/v2.1/catalog/datasets/vehicle-position-rt-production/records?limit=80&apikey=abdb9e039bc041977c9c251402ad6d967fef8530dedcacdd2c91385e")
+    response, err := http.Get("https://stibmivb.opendatasoft.com/api/explore/v2.1/catalog/datasets/vehicle-position-rt-production/records?limit=80&apikey=" + os.Getenv("STIB_API_KEY"))
     if err != nil {
         fmt.Println("Error making API request:", err)
         
